@@ -1,0 +1,143 @@
+.discussions-page {
+    padding: 3rem 0;
+    min-height: calc(100vh - 80px);
+}
+
+.discussions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.discussion-card {
+    padding: 1.5rem;
+    transition: all var(--transition-base);
+}
+
+.discussion-card.pinned {
+    background: linear-gradient(135deg,
+            rgba(124, 58, 237, 0.1),
+            rgba(236, 72, 153, 0.05));
+    border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.discussion-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.discussion-content {
+    width: 100%;
+}
+
+.discussion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.discussion-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.discussion-title:hover {
+    color: var(--primary-light);
+}
+
+.pin-icon {
+    font-size: 1rem;
+}
+
+.discussion-excerpt {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.discussion-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.discussion-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.date {
+    color: var(--text-tertiary);
+    font-size: 0.875rem;
+}
+
+.discussion-stats {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.stat svg {
+    font-size: 1rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.empty-state p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .discussion-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .discussion-stats {
+        width: 100%;
+        justify-content: space-around;
+    }
+}

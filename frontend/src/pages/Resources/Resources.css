@@ -1,0 +1,310 @@
+.resources-page {
+    padding: 3rem 0;
+    min-height: calc(100vh - 80px);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(10, 186, 181, 0.1), rgba(173, 238, 217, 0.1));
+    border-radius: var(--radius-xl);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-header p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.filters-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.filters-grid .form-group {
+    margin-bottom: 0;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Enhanced Resource Card with Image */
+.resource-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.resource-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(10, 186, 181, 0.3);
+}
+
+/* Course Thumbnail */
+.resource-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.resource-thumbnail-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+}
+
+/* Resource Content */
+.resource-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.resource-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.resource-header h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    flex: 1;
+    color: var(--text-primary);
+    transition: color var(--transition-fast);
+}
+
+.resource-header h3:hover {
+    color: var(--primary);
+}
+
+.resource-description {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+.resource-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.resource-tags .tag {
+    background: linear-gradient(135deg, rgba(10, 186, 181, 0.2), rgba(173, 238, 217, 0.2));
+    border: 1px solid var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-xl);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary-light);
+    transition: all var(--transition-fast);
+}
+
+.resource-tags .tag:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.05);
+}
+
+.resource-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(10, 186, 181, 0.2);
+    border-bottom: 1px solid rgba(10, 186, 181, 0.2);
+    margin-bottom: 1rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.star-filled {
+    color: #FFD700;
+    fill: #FFD700;
+}
+
+.star-empty {
+    color: var(--text-tertiary);
+}
+
+.rating-count {
+    margin-left: 0.5rem;
+    color: var(--text-tertiary);
+    font-size: 0.875rem;
+}
+
+.downloads {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-light);
+    font-weight: 600;
+}
+
+.resource-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px dashed rgba(10, 186, 181, 0.2);
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+
+.resource-actions {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.resource-actions .btn {
+    flex: 1;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    border-radius: var(--radius-md);
+}
+
+/* Bookmark button should be slightly different */
+.resource-actions .btn-secondary {
+    flex: 0 0 auto;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resource-actions .btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    box-shadow: var(--shadow-glow);
+}
+
+.resource-actions .btn:hover {
+    transform: scale(1.05);
+}
+
+/* Difficulty Badge Styles */
+.badge-beginner {
+    background: linear-gradient(135deg, #10b981, #34d399);
+    color: white;
+}
+
+.badge-intermediate {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    color: white;
+}
+
+.badge-advanced {
+    background: linear-gradient(135deg, #ef4444, #f87171);
+    color: white;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+}
+
+/* Loading Animation */
+.loading-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .resources-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .resource-thumbnail,
+    .resource-thumbnail-placeholder {
+        height: 180px;
+    }
+}

@@ -1,0 +1,70 @@
+.user-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-xl);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    cursor: help;
+    border: 1px solid transparent;
+}
+
+.user-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.badge-gold {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.badge-silver {
+    background: linear-gradient(135deg, #C0C0C0, #808080);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.badge-bronze {
+    background: linear-gradient(135deg, #CD7F32, #A0522D);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.badge-teal {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.badge-sm {
+    padding: 0.1rem 0.4rem;
+    font-size: 0.65rem;
+    gap: 0.2rem;
+}
+
+.badge-lg {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    gap: 0.5rem;
+}
+
+.badge-emoji {
+    font-size: 0.9rem;
+}
+
+.badge-text {
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    .badge-text {
+        display: none;
+    }
+}
